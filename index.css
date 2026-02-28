@@ -9,7 +9,7 @@ body {
     flex-direction: column;
 }
 
-/* menu */
+/* MENU */
 .menu {
     display: flex;
     justify-content: center;
@@ -25,30 +25,38 @@ body {
     font-size: 18px;
 }
 
-/* MAIN segura a imagem */
+/* MAIN */
 main {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: start;   /* coloca a imagem mais pra cima */
-    padding-top: 20px;    /* deixa um espaço abaixo do menu */
+    align-items: center;
+    padding: 20px 0;
 }
 
-/* LOGO */
+/* LOGO — RESPONSIVO */
 .logo {
-    max-width: 300px;
-    max-height: 300px;
+    width: 60vw;              /* 60% da tela - perfeito para mobile */
+    max-width: 300px;         /* não passa disso em telas grandes */
+    aspect-ratio: 1/1;        /* mantém quadrado */
     object-fit: cover;
     border-radius: 50%;
-    aspect-ratio: 1/1;
 }
 
-/* footer */
+/* LOGO MAIOR EM PC */
+@media (min-width: 800px) {
+    .logo {
+        width: 280px;
+        max-width: 350px;
+    }
+}
+
+/* FOOTER */
 .footer {
     background-color: black;
     color: white;
     text-align: center;
     padding: 15px 0;
     width: 100%;
+    font-size: 16px;
 }
-
