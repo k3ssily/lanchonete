@@ -1,0 +1,51 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+/* menu */
+.menu {
+    display: flex;
+    justify-content: center;
+    background: yellow;
+    padding: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
+}
+
+/* MAIN vai segurar a imagem e ajustar automaticamente */
+main {
+    flex: 1;               /* ocupa o espaço entre menu e footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;      /* garante que nada vaze */
+}
+
+/* IMAGEM se ajusta automaticamente para CABER */
+.logo {
+    max-height: 100%;      /* nunca passa da altura disponível */
+    max-width: 100%;       /* nunca passa da largura */
+    object-fit: contain;   /* aparece inteira sem cortar */
+}
+
+/* footer */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+}
