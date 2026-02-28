@@ -9,7 +9,7 @@ body {
     flex-direction: column;
 }
 
-/* MENU */
+/* menu */
 .menu {
     display: flex;
     justify-content: center;
@@ -25,41 +25,25 @@ body {
     font-size: 18px;
 }
 
-/* MAIN */
+/* MAIN segura a imagem */
 main {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;   /* coloca a imagem mais pra cima */
+    padding-top: 20px;    /* deixa um espaço abaixo do menu */
 }
 
-/* LOGO — RESPONSIVO DE VERDADE */
+/* LOGO */
 .logo {
-    width: 40vw;             /* 40% da largura da tela */
-    max-width: 250px;        /* não passa disso */
-    min-width: 120px;        /* não fica pequena demais */
-    aspect-ratio: 1 / 1;     /* mantém redonda */
-    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
     object-fit: cover;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
 }
 
-/* AJUSTE ESPECIAL PARA CELULAR PEQUENO */
-@media (max-width: 480px) {
-    .logo {
-        width: 55vw;         /* aumenta um pouco no celular */
-        max-width: 200px;
-    }
-}
-
-/* AJUSTE ESPECIAL PARA COMPUTADOR GRANDE */
-@media (min-width: 900px) {
-    .logo {
-        width: 220px;        /* tamanho ideal pra desktop */
-        max-width: 300px;
-    }
-}
-
-/* FOOTER */
+/* footer */
 .footer {
     background-color: black;
     color: white;
