@@ -31,23 +31,31 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
 }
 
-/* LOGO — RESPONSIVO */
+/* LOGO — RESPONSIVO DE VERDADE */
 .logo {
-    width: 60vw;              /* 60% da tela - perfeito para mobile */
-    max-width: 300px;         /* não passa disso em telas grandes */
-    aspect-ratio: 1/1;        /* mantém quadrado */
-    object-fit: cover;
+    width: 40vw;             /* 40% da largura da tela */
+    max-width: 250px;        /* não passa disso */
+    min-width: 120px;        /* não fica pequena demais */
+    aspect-ratio: 1 / 1;     /* mantém redonda */
     border-radius: 50%;
+    object-fit: cover;
 }
 
-/* LOGO MAIOR EM PC */
-@media (min-width: 800px) {
+/* AJUSTE ESPECIAL PARA CELULAR PEQUENO */
+@media (max-width: 480px) {
     .logo {
-        width: 280px;
-        max-width: 350px;
+        width: 55vw;         /* aumenta um pouco no celular */
+        max-width: 200px;
+    }
+}
+
+/* AJUSTE ESPECIAL PARA COMPUTADOR GRANDE */
+@media (min-width: 900px) {
+    .logo {
+        width: 220px;        /* tamanho ideal pra desktop */
+        max-width: 300px;
     }
 }
 
@@ -58,5 +66,4 @@ main {
     text-align: center;
     padding: 15px 0;
     width: 100%;
-    font-size: 16px;
 }
